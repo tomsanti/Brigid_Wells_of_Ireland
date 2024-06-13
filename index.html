@@ -90,7 +90,7 @@
           : url
       };
     };
-    //YOUR TURN: add your Mapbox token
+    //add my Mapbox token
 
     mapboxgl.accessToken = 'pk.eyJ1IjoidHNyYW1zYXkiLCJhIjoiY2x3bGIyNWpjMTlnMTJpbDg1bzVnbThzZSJ9.O90bavOtZD2phI5-VJr4kw'; //Mapbox token
     var map = new mapboxgl.Map({
@@ -104,8 +104,8 @@
     $(document).ready(function () {
       $.ajax({
         type: "GET",
-        //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/1VAEbYdBMSOs4H-UEmuFwu6ZO5KhwfKN-4l4Awm5iPSo/gviz/tq?tqx=out:csv&sheet=cal_haunted_places',
+        //My csv link
+        url: 'https://docs.google.com/spreadsheets/d/1VAEbYdBMSOs4H-UEmuFwu6ZO5KhwfKN-4l4Awm5iPSo/gviz/tq?tqx=out:csv&sheet=st_brigid_wells',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
@@ -128,9 +128,9 @@
                 'data': data
               },
               'paint': {
-                'circle-radius': 6,
+                'circle-radius': 7,
                 'circle-color': "green",
-                'circle-stroke-width': 1,
+                'circle-stroke-width': 1.5,
                 'circle-stroke-color': "black"
               }
             });
