@@ -111,8 +111,7 @@
       });
 
 
-
-       function makeGeoJSON(csvData) {
+        function makeGeoJSON(csvData) {
         csv2geojson.csv2geojson(csvData, {
           latfield: 'latitude',
           lonfield: 'longitude',
@@ -130,11 +129,12 @@
               },
               'paint': {
                 'circle-radius': 5,
-                'circle-color': "purple",
+                'circle-color': "black",
                 'circle-stroke-width': 1,
-                'circle-stroke-color': "black"
+                'circle-stroke-color': "white"
               }
             });
+
 
 
             // When a click event occurs on a feature in the csvData layer, open a popup at the
