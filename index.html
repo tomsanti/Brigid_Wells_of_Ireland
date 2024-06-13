@@ -112,20 +112,15 @@
 
 
 
-      function makeGeoJSON(csvData) {
+       function makeGeoJSON(csvData) {
         csv2geojson.csv2geojson(csvData, {
           latfield: 'latitude',
           lonfield: 'longitude',
           delimiter: ','
         }, function (err, data) {
           map.on('load', function () {
-    // Add the geojson source
-    map.addSource('csvData', {
-        'type': 'geojson',
-        'data': data
-    });
 
-    //Add the layer to the map
+            //Add the the layer to the map
             map.addLayer({
               'id': 'csvData',
               'type': 'circle',
@@ -140,7 +135,6 @@
                 'circle-stroke-color': "black"
               }
             });
-
 
             // When a click event occurs on a feature in the csvData layer, open a popup at the
             // location of the feature, with description HTML from its properties.
