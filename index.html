@@ -121,21 +121,21 @@
           map.on('load', function () {
 
             //Add the the layer to the map
-              map.addLayer({
-        'id': 'csvData',
-        'type': 'symbol',
-        'source': 'csvData',
-        'layout': {
-            'icon-image': 'landmark', // Use the built-in cross icon
-            'icon-size': 3 // Adjust the size of the cross icon as needed
-        },
-        'paint': {
-            'icon-color': 'purple', // Color the icon purple
-            'icon-halo-width': 1,
-            'icon-halo-color': 'black'
-        }
-    });
-});
+            map.addLayer({
+              'id': 'csvData',
+              'type': 'circle',
+              'source': {
+                'type': 'geojson',
+                'data': data
+              },
+              'paint': {
+                'circle-radius': 5,
+                'circle-color': "purple",
+                'circle-stroke-width': 1,
+                'circle-stroke-color': "black"
+              }
+            });
+
 
             // When a click event occurs on a feature in the csvData layer, open a popup at the
             // location of the feature, with description HTML from its properties.
