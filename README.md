@@ -1,1 +1,1 @@
-# Map of Ireland's St. Brigid's Wells
+# Map of Ireland's St. Brigid Wells
